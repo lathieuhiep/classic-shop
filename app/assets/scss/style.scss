@@ -1,0 +1,35 @@
+/*
+Template Name: RealEstate
+Theme URI: https://uxui.vn/
+Author: DiepLK
+Author URI: https://www.facebook.com/lathieuhiep
+Version: 1.0.0
+Description: Template RealEstate
+*/
+
+/**
+* Table of Contents:
+*
+# General
+# Reboot Bootstrap
+# Header
+# Footer
+* -----------------------------------------------------------------------------
+*/
+
+@import "abstracts/abstracts";
+
+/**
+# General
+-----------------------------------------------------------------------------*/
+@import "general";
+
+/**
+# Header
+-----------------------------------------------------------------------------*/
+@import "componets/header";
+
+/**
+# Footer
+-----------------------------------------------------------------------------*/
+@import "componets/footer";

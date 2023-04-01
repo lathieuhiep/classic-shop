@@ -1,0 +1,95 @@
+.header {
+  &__top {
+    padding: 0 5.5rem;
+    border-bottom: 1px solid $border-color-second;
+    
+    ul {
+      display: flex;
+    }
+  }
+  
+  .list-social {
+    a {
+      padding: 0.9rem 1.6rem;
+      display: inline-block;
+      color: $color-white;
+      border-right: 1px solid $border-color-second;
+    }
+    
+    li {
+      &:first-child {
+        a {
+          border-left: 1px solid $border-color-second;
+        }
+      }
+    }
+  }
+}
+
+.navbar-header {
+  padding: 0;
+  height: inherit;
+  @include grid-columns(24px, 120px 1fr);
+
+  > div {
+    height: inherit;
+  }
+
+  .logo {
+    height: inherit;
+  }
+
+  .menu {
+    > ul {
+      > li {
+        position: relative;
+        padding: 0 12px;
+        
+        &:first-child {
+          padding-left: 0;
+        }
+
+        &:last-child {
+          padding-right: 0;
+        }
+
+        > a {
+          position: relative;
+
+          &:after {
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 2px;
+            left: 0;
+            bottom: -2px;
+            background-color: $background-hover;
+            @include transition();
+          }
+
+          &:hover {
+            &:after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    ul {
+      @include reset-list;
+      height: inherit;
+      display: flex;
+
+      li {
+        position: relative;
+        height: inherit;
+        @include flex-center-vert;
+
+        a {
+          display: block;
+        }
+      }
+    }
+  }
+}
