@@ -44,7 +44,9 @@ async function buildWebFontsAwesome() {
         'node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf',
         'node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2',
         'node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf',
-        'node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2'
+        'node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2',
+        'node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf',
+        'node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff2'
     ])
         .pipe(dest(`${pathDestBuild}assets/libs/webfonts`))
         .pipe(browserSync.stream())
