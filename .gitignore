@@ -1,6 +1,7 @@
 .idea/
 .sass-cache/
 node_modules/
+build/
 *.css.map
 *.sass.map
 *.scss.map
