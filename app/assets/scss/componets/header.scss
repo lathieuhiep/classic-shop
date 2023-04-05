@@ -1,10 +1,75 @@
 .header {
   &__top {
-    padding: 0 5.5rem;
-    border-bottom: 1px solid $border-color-second;
-    
+    padding: 0.6rem 5.5rem;
+    color: $color-white;
+    background-color: $background-primary;
+
     ul {
       display: flex;
+      @include reset-list();
+
+      ~ ul {
+        margin-left: 1.4rem;
+        padding-left: 1.4rem;
+        border-left: 1px solid $color-white-opacity;
+      }
+
+      li {
+        a {
+          display: inline-block;
+          color: $color-white-opacity;
+
+          &:hover {
+            color: $color-white;
+          }
+        }
+      }
+    }
+
+    .left {
+      font-size: 1.2rem;
+    }
+
+    .right {
+      font-size: 1.28rem;
+
+      &__nav {
+        li {
+          ~ li {
+            margin-left: 1.4rem;
+
+            a {
+              position: relative;
+
+              &:before {
+                position: absolute;
+                content: "";
+                width: 1px;
+                top: 0;
+                left: -0.7rem;
+                bottom: 0;
+                background-color: rgba(255,255,255,.2);
+              }
+            }
+          }
+        }
+      }
+
+      &__action {
+        .wishlist {
+          margin-right: 1.4rem;
+        }
+
+        .social {
+          &__list {
+            a {
+              ~ a {
+                margin-left: 0.7rem;
+              }
+            }
+          }
+        }
+      }
     }
   }
   
