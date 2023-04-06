@@ -13,6 +13,7 @@ Description: Template RealEstate
 # General
 # Reboot Bootstrap
 # Header
+# Main Menu
 # Footer
 * -----------------------------------------------------------------------------
 */
@@ -28,6 +29,11 @@ Description: Template RealEstate
 # Header
 -----------------------------------------------------------------------------*/
 @import "componets/header";
+
+/**
+# Main Menu
+-----------------------------------------------------------------------------*/
+@import "componets/menu";
 
 /**
 # Footer
