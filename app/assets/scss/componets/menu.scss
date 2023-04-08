@@ -1,5 +1,7 @@
 .nav-main {
   height: 90px;
+  box-shadow: 0 3px 3px -3px rgba(0,0,0,.3);
+  background-color: #ffffff;
 
   > div {
 	height: inherit;
@@ -9,43 +11,69 @@
   }
 
   .logo {
-	display: inline-block;
-  }
-
-  ul {
-	grid-gap: 1.2rem 1.6rem;
-	font-size: 1.6rem;
-
-	> li {
-	  position: relative;
-	  @include flex-center-vert();
-
-	  > a {
-		font-weight: 700;
-	  }
-
-	  .sub-menu {
-		position: absolute;
-		top: 100%;
-		left: 0;
-		min-width: 260px;
-		padding: 20px;
-		z-index: 99;
-		box-shadow: 1px 1px 15px rgba(0,0,0,.15);
-		background-color: #ffffff;
-	  }
-	}
-
-	li {
-	  a {
-
-	  }
+	a {
+	  display: inline-block;
 	}
   }
 
-  .primary-menu {
-	&__item {
+  .site-menu {
+	> ul {
+	  grid-gap: 1.2rem 1.6rem;
 
+	  > li {
+		position: relative;
+		@include flex-center-vert();
+
+		> a {
+		  font-size: 1.6rem;
+		  font-weight: 700;
+		}
+	  }
+	}
+
+	ul {
+	  @include reset-list();
+
+	  li {
+		.sub-menu {
+		  position: absolute;
+		  top: 100%;
+		  left: 0;
+		  opacity: 0;
+		  visibility: hidden;
+		  min-width: 260px;
+		  padding: 1rem 1.6rem;
+		  z-index: 99;
+		  box-shadow: 1px 1px 15px rgba(0,0,0,.15);
+		  background-color: #ffffff;
+		  @include transition();
+
+		  li {
+			~ li {
+			  margin-top: 0.5rem;
+			  padding-top: 0.5rem;
+			  border-top: 1px solid #ececec;
+			}
+		  }
+
+		  a {
+			font-size: 1.5rem;
+		  }
+		}
+
+		.toggle-menu {
+		  margin-left: 0.5rem;
+		  font-size: 1.2rem;
+		  transform: translateY(2px);
+		}
+
+		&:hover {
+		  .sub-menu {
+			opacity: 1;
+			visibility: visible;
+		  }
+		}
+	  }
 	}
   }
 }
